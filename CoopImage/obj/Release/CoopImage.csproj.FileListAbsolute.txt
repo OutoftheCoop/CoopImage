@@ -1,0 +1,5 @@
+C:\Users\jeff\Documents\GitHub\CoopImage\CoopImage\bin\Release\CoopImage.dll
+C:\Users\jeff\Documents\GitHub\CoopImage\CoopImage\bin\Release\CoopImage.pdb
+C:\Users\jeff\Documents\GitHub\CoopImage\CoopImage\bin\Release\CoopRelay.dll
+C:\Users\jeff\Documents\GitHub\CoopImage\CoopImage\obj\Release\CoopImage.dll
+C:\Users\jeff\Documents\GitHub\CoopImage\CoopImage\obj\Release\CoopImage.pdb
