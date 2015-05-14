@@ -8,6 +8,20 @@ namespace CoopImage
 {
     public class Mvc
     {
+        public static string GoUrl(string url, int height, int width, int maxheight, int maxwidth, bool constrain, int quality, string watermark)
+        {
+            return String.Format("/CoopImage.ashx?imagepath={0}&height={1}&width={2}&maxheight={3}&maxwidth={4}&constrain={5}&quality={6}&watermark={7}",
+                    System.Web.HttpUtility.UrlEncode(url),
+                    height,
+                    width,
+                    maxheight,
+                    maxwidth,
+                    constrain,
+                    quality,
+                    System.Web.HttpUtility.UrlEncode(watermark)
+                );
+        }
+
         public static string Go(object html, int height, int width, int maxheight, int maxwidth, bool constrain, int quality, string watermark)
         {
             string pattern = @"(<img.+?src=[\""'])(.+?)([\""'].*?>)";
@@ -16,7 +30,7 @@ namespace CoopImage
             {
                 var ss = match.Groups[2].Value.Split(new char[] { '?' });
                 var group2 = String.Format("/CoopImage.ashx?imagepath={0}&amp;height={1}&amp;width={2}&amp;maxheight={3}&amp;maxwidth={4}&amp;constrain={5}&amp;quality={6}&amp;watermark={7}",
-                    ss[0],
+                    System.Web.HttpUtility.UrlEncode(ss[0]),
                     height,
                     width,
                     maxheight,

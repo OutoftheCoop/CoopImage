@@ -53,7 +53,7 @@ namespace CoopImage
                                 }
                             }
                         }
-                        if (imgInFormat == ImageFormat.Jpeg)
+                        if (imgInFormat == ImageFormat.Jpeg || imgInFormat == ImageFormat.Gif)
                         {
                             ImageCodecInfo jpgEncoder = GetEncoder(ImageFormat.Jpeg);
                             var encoderparameters = GetEncoderParameters((long)req.Quality);
