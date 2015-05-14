@@ -102,6 +102,9 @@ namespace CoopImage
         {
             var r = new ImageResizeRatio();
 
+            r.Height = 1;
+            r.Width = 1;
+
             // HEIGHT WIDTH
             if (req.Height > 0)
                 r.Height = req.Height / (double)imgIn.Height;
