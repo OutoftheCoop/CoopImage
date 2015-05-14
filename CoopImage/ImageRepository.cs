@@ -125,9 +125,9 @@ namespace CoopImage
 
             //CONSTRAIN
             if (r.Height < r.Width)
-                r.Height = r.Width;
-            else
                 r.Width = r.Height;
+            else
+                r.Height = r.Width;
 
             return r;
         }
